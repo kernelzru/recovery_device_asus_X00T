@@ -137,3 +137,6 @@ TW_EXCLUDE_TWRPAPP := true
 TWRP_INCLUDE_LOGCAT := true
 # TWRP Debug Flags
 TARGET_USES_LOGD := true
+
+# Vibration
+TW_SUPPORT_INPUT_AIDL_HAPTICS := true

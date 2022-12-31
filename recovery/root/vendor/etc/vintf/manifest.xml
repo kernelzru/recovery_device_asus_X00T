@@ -577,4 +577,8 @@
     <sepolicy>
         <version>32.0</version>
     </sepolicy>
+    <hal format="aidl">
+        <name>android.hardware.vibrator</name>
+        <fqname>IVibrator/default</fqname>
+    </hal>
 </manifest>

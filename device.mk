@@ -35,3 +35,17 @@ PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
+
+# Vibrator Blob
+RECOVERY_BINARY_SOURCE_FILES += \
+    $(TARGET_OUT_VENDOR_EXECUTABLES)/hw/vendor.qti.hardware.vibrator.service
+
+# Additional Libraries
+TARGET_RECOVERY_DEVICE_MODULES += \
+    vendor.qti.hardware.vibrator.service \
+    vendor.qti.hardware.vibrator.impl \
+    libqtivibratoreffect
+
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/vendor.qti.hardware.vibrator.impl.so \
+    $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libqtivibratoreffect.so
